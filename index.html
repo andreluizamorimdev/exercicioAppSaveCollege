@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+<script>
+    var listStudents = [
+        {
+            name: "André Luiz",
+            height: 1.68,
+            age: 23,
+            gender: "Masculino",
+            classroom: "Fullstack Trindade",
+            math: 8,
+        },
+        {
+            name: "Joana",
+            height: 1.70,
+            age: 34,
+            gender: "Feminino",
+            classroom: "Fullstack Coqueiros",
+            math: 9,
+        },
+        {
+            name: "Maria",
+            height: 1.55,
+            age: 43,
+            gender: "Feminino",
+            classroom: "Fullstack Pantanal",
+            math: 7,
+        },
+        {
+            name: "João",
+            height: 1.83,
+            age: 30,
+            gender: "Masculino",
+            classroom: "Fullstack Itaguaçu",
+            math: 10,
+        },
+        {
+            name: "Marcelo",
+            height: 1.49,
+            age: 23,
+            gender: "Masculino",
+            classroom: "Fullstack Itacorubi",
+            math: 6         
+        },
+    ];
+    console.log(listStudents);
+
+    //ex 2
+    var studentsAverage = (listStudents[0].math + listStudents[1].math + listStudents[2].math + listStudents[3].math + listStudents[4].math) / 5
+    console.log(studentsAverage);
+
+    //ex 3
+    for(i=0; i < listStudents.length; i++) {
+        if(listStudents[i].math >= 7) {
+            console.log(`${listStudents[i].name} foi aprovado`);
+        } else {
+            console.log(`${listStudents[i].name} foi reprovado`);
+        } 
+        //listStudents[i].math >= 7 ? console.log(`${listStudents[i].name} foi aprovado`) : console.log(`${listStudents[i].name} foi reprovado `);
+    }
+
+
+</script>
+</html>
