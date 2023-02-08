@@ -25,7 +25,7 @@
             age: 34,
             gender: "Feminino",
             classroom: "Fullstack Coqueiros",
-            math: 9,
+            math: 5,
         },
         {
             name: "Maria",
@@ -54,19 +54,41 @@
     ];
     console.log(listStudents);
 
-    //ex 2
-    var studentsAverage = (listStudents[0].math + listStudents[1].math + listStudents[2].math + listStudents[3].math + listStudents[4].math) / 5
-    console.log(studentsAverage);
+    //ex 2 semana 1 Favor descomentar e comentar o ex1 semana 2 ao testar
+   
+    /*  var studentsAverage = (listStudents[0].math + listStudents[1].math + listStudents[2].math + listStudents[3].math + listStudents[4].math) / 5
+    console.log(studentsAverage); */
 
-    //ex 3
-    for(i=0; i < listStudents.length; i++) {
-        if(listStudents[i].math >= 7) {
-            console.log(`${listStudents[i].name} foi aprovado`);
-        } else {
-            console.log(`${listStudents[i].name} foi reprovado`);
-        } 
+    //ex 3 já estava utilizando estruturas de repetição para imprimir o nome e aprovado/reprovado
+    for(let i=0; i < listStudents.length; i++) {
+        switch (listStudents[i].gender) {
+            case "Masculino":
+                if(listStudents[i].math >= 7) {
+                console.log(`${listStudents[i].name} foi aprovado`);
+                } else {
+                    console.log(`${listStudents[i].name} foi reprovado`);
+                }
+            break;
+
+            case "Feminino": 
+                if(listStudents[i].math >= 7) {
+                console.log(`${listStudents[i].name} foi aprovada`);
+                } 
+                else {
+                    console.log(`${listStudents[i].name} foi reprovada`);
+                }
+        }
         //listStudents[i].math >= 7 ? console.log(`${listStudents[i].name} foi aprovado`) : console.log(`${listStudents[i].name} foi reprovado `);
     }
+
+    //[M1S02] Ex1 semana 2 Estruturas de repetição
+    let sumGrades = 0;
+    listStudents.forEach((student) => {
+        sumGrades += student.math;
+    });
+
+    const studentsAverage = sumGrades / listStudents.length;
+    console.log(studentsAverage);
 
 
 </script>
