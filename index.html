@@ -60,7 +60,30 @@
     console.log(studentsAverage); */
 
     //ex 3 já estava utilizando estruturas de repetição para imprimir o nome e aprovado/reprovado
-    for(let i=0; i < listStudents.length; i++) {
+        listStudents.forEach((student) => {
+            switch (student.gender) {
+            case "Masculino":
+                if(student.math >= 7) {
+                console.log(`${student.name} foi aprovado`);
+                } else {
+                    console.log(`${student.name} foi reprovado`);
+                }
+            break;
+
+            case "Feminino": 
+                if(student.math >= 7) {
+                console.log(`${student.name} foi aprovada`);
+                } 
+                else {
+                    console.log(`${student.name} foi reprovada`);
+                }
+            break;
+
+            default:
+                console.log(`Gênero estudante não especificado`);
+            }
+        })
+    /* for(let i=0; i < listStudents.length; i++) {
         switch (listStudents[i].gender) {
             case "Masculino":
                 if(listStudents[i].math >= 7) {
@@ -83,7 +106,7 @@
                 console.log(`Genero estudante não especificado`);
         }
         //listStudents[i].math >= 7 ? console.log(`${listStudents[i].name} foi aprovado`) : console.log(`${listStudents[i].name} foi reprovado `);
-    }
+    } */
 
     //[M1S02] Ex1 semana 2 Estruturas de repetição
     let sumGrades = 0;
