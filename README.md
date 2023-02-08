@@ -1,5 +1,5 @@
 # exercicioAppSaveCollege
-Exercícios da primeira semana do curso de Fullstack do floripa mais tec.
+Exercícios da primeira semana do curso de Fullstack turma Trindade do floripa mais tec.
 
 
 [M1S1] Ex 1 - [App SaveCollege] Dados dos alunos
